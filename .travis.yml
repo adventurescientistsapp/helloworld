@@ -1,9 +1,10 @@
 language: go
-go:
-- 1.x
 
-os:
-  - linux
+go:
+  - 1.x
+
+script:
+  - go test -o bin_helloworld
 
 deploy:
   provider: lambda
