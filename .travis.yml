@@ -1,6 +1,10 @@
 language: go
 go:
 - 1.x
+
+os:
+  - linux
+
 deploy:
   provider: lambda
   function_name: helloworld
