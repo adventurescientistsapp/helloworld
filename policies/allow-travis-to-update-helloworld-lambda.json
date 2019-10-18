@@ -37,7 +37,7 @@
             "Action": [
                 "iam:PassRole"
             ],
-            "Resource": "arn:aws:iam::664794319989:role/helloworld-lambda-cd-pusher"
+            "Resource": "arn:aws:iam::664794319989:role/helloworld-lambda-executor"
         }
     ]
 }
