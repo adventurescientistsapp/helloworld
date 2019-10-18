@@ -4,7 +4,7 @@ go:
   - 1.x
 
 script:
-  - go test -o bin_helloworld
+  - go test -v -o bin_helloworld
 
 deploy:
   provider: lambda
