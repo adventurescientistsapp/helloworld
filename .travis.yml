@@ -4,7 +4,7 @@ go:
   - 1.x
 
 script:
-  - go test -v -o bin_helloworld
+  - env GOOS=linux go test -v -o bin_helloworld
   - zip -j bin_helloworld.zip bin_helloworld
 
 deploy:
