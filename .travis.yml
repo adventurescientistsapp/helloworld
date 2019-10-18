@@ -5,6 +5,7 @@ go:
 
 script:
   - go test -v -o bin_helloworld
+  - zip -j bin_helloworld.zip bin_helloworld
 
 deploy:
   provider: lambda
@@ -12,7 +13,7 @@ deploy:
   region: us-east-2
   role: arn:aws:iam::664794319989:role/helloworld-lambda-executor
   runtime: go1.x
-  handler_name: helloworld
+  handler_name: "bin_helloworld"
   access_key_id: AKIAZVSGUJR2WV4U6BG2
   secret_access_key:
     secure: Gi6TaQ9v0t4WCryPoTXgxe3KUF2u18ZYSk8sv996gTXK/GcI+A0aSrn2uC776zFN4UZT91QdXPQkRXvtLKraw0qNSfY9w8khb7uox/n4JUAR7sBJBtQnkG7zc6dpWwNdNQOwOnltHfwFKyAlg1w++8MN1Ipr2gMhZhtKurX+n824jyERkbXJXDE4AajX6F25MwlnpakU1watJZzwTfD3BzKMSQy5Tl6jcOwOcBHAYnWsvODGFM71foPyahJJVkDK+hxdLCaZV+AjA45yvaJuBz8gn/J5Q4go8+P5ryMdfHVQ4q7+EYnClcY/BiKePSWQmUSFxoeiDhS5cswlf+lleKVHPe/o7dIdEnDcxlnOBpkoxiRy2BVau36s1HxztZO7VMJK4X/ET2Dj5PFtiIvbCTw7KpCSwP89KsnqwIW5DP1PhmqyT5e6z4lFziFB/7x20yH/o52cJwOFxePCyNnUkyf1G0LloW/pXgfmDqYMVUzrsLUJceHyjCour0KCPijS0DUzeXoWCizsbKUL4lq4QzIOkyy6siGLBNRwR7u/qZllDHQcBfyScxFGKac/henG2Iod7v/U7JAaMkBtBgJrD21slhzJiED0EAcfszcwdRbItQC0JmEGlAUm2/nAy97uRyqKhO02SCAs6NLCIxyDlZkJaCgDzohZ0RFfiDaJ26w=
