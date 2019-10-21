@@ -14,12 +14,13 @@ func TestHandlePopulatedRequest(t *testing.T) {
   assertEqual(t, msg, "Hello World! event.Input=helloworld")
 }
 
-func TestHandleEmptyRequest(t *testing.T) {
+func TestHandleSecretRequest(t *testing.T) {
   var event BasicEvent
+  event.Input = "secret"
   
   msg, _ := HandleRequest(nil, event)
   
-  assertEqual(t, msg, "Empty event.Input not allowed")
+  assertEqual(t, msg, "Oooh you found the secret! Your input was =secret")
 }
 
 func assertEqual(t *testing.T, s1 string, s2 string) {

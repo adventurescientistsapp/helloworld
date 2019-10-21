@@ -11,10 +11,10 @@ type BasicEvent struct {
 }
 
 func HandleRequest(ctx context.Context, event BasicEvent) (string, error) {
-  if event.Input == "" {
-    return "Empty event.Input not allowed", nil
+  if event.Input == "secret" {
+    return fmt.Sprintf("Oooh you found the secret! Your input was =%s", event.Input), nil
   }	
-  return fmt.Sprintf("Hello World! event.Input=%s", event.Input ), nil
+  return fmt.Sprintf("Hello World! event.Input=%s", event.Input), nil
 }
 
 func main() {
